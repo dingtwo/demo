@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>鸟</title>
+        <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+		<script src="../打飞机/js/loading.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var canvas = document.getElementById("canvas");
+			var ctx = canvas.getContext("2d");
+			   
+			var SCREEN_WIDTH = document.documentElement.clientWidth;
+			var SCREEN_HEIGHT = document.documentElement.clientHeight;
+			
+			canvas.width = SCREEN_WIDTH;
+			canvas.height = SCREEN_HEIGHT;
+//			console.time("start");
+			loading({
+			"0":"img/0.jpg","1":"img/1.jpg","2":"img/2.jpg","3":"img/3.jpg","4":"img/4.jpg","5":"img/5.jpg","6":"img/6.jpg","7":"img/7.jpg","8":"img/8.jpg","9":"img/9.jpg","banner":"img/banner.jpg","bg":"img/bg.jpg","bird0":"img/bird0.png","bird1":"img/bird1.png","down_bird0":"img/down_bird0.png","down_bird1":"img/down_bird1.png","down_mod":"img/down_mod.png","down_pipe":"img/down_pipe.png","game_over":"img/game_over.jpg","head":"img/head.jpg","message":"img/message.jpg","ok":"img/ok.jpg","score":"img/score.jpg","start":"img/start.jpg","submit":"img/submit.jpg","up_bird0":"img/up_bird0.png","up_bird1":"img/up_bird1.png","up_mod":"img/up_mod.png","up_pipe":"img/up_pipe.png"
+			}, {
+			    progress: function (x) {
+//                    console.log(x);
+                },
+				complete: main
+			});
+
+            var SCALE_X = SCREEN_WIDTH/343;
+            var SCALE_Y = SCREEN_HEIGHT/480;
+
+
+            //加载完成之后调用的函数
+            function main(obj) {
+                var x = 0;
+
+                function Banner() {
+                    this.img = obj.banner;
+                    this.x = -SCREEN_WIDTH;
+                    this.y = 0.884*SCREEN_HEIGHT;
+                    this.w = SCREEN_WIDTH*2;
+                    this.h = this.img.height*SCALE_Y;
+                }
+                Banner.prototype.move = function () {
+                    this.x += 1;
+                    if (this.x >= 0){
+                        this.x = -SCREEN_WIDTH;
+                    }
+                };
+                Banner.prototype.draw = function () {
+                    ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
+                };
+
+                var banner = new Banner();
+
+                var titleImg = {
+                    img: obj.head,
+                    x: SCREEN_WIDTH/2 - obj.head.width/2,
+                    y: 100,
+                    w: obj.head.width*SCALE_X,
+                    h: obj.head.height*SCALE_Y,
+                    speed: 0.8,
+                    show: true
+                };
+                titleImg.move = function () {
+                    if (this.show) {
+                        this.y += this.speed;
+                        if (this.y >= 180) {
+                            this.speed *= -1;
+                        }
+                        if (this.y == 100) {
+                            this.speed *= -1;
+                        };
+                    }
+                };
+                titleImg.draw = function () {
+                    if (this.show) {
+                        ctx.drawImage(this.img, this.x, this.y, this.w, this.h);;
+                    }
+
+                };
+                var start = {
+                    img: obj.start,
+                    x: SCREEN_WIDTH/2 - obj.start.width/2,
+                    y: 400,
+                    w: obj.start.width*SCALE_X,
+                    h: obj.start.height*SCALE_Y,
+                    show: true
+                };
+                start.draw = function () {
+                    if (this.show) {
+                        ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
+                    }
+                };
+                window.addEventListener("touchstart", function (e) {
+                    var e = e || window.event;
+                    var touch = e.touches[0];
+                    //判断位置
+                    //此处先写错e.clienX, 然后通过全局替换使用正则的正向预查将所有.clientX|Y前的e替换为touch
+                    if (start.show) {
+                        if (touch.clientX >= start.x && touch.clientX <= start.x+start.w && touch.clientY >= start.y && touch.clientY <= start.y+start.h) {
+                            console.log("点到了");
+                            start.show = false;
+                            titleImg.show = false;
+                        };
+                    }
+                }, false);
+                window.addEventListener("touchmove", function (e) {
+                    var e = e || window.event;
+                    e.preventDefault();
+                }, false);
+                //动画的函数
+                function move() {
+//                    x += 1;
+                    ctx.clearRect(0,0,canvas.width, canvas.height);
+                    //背景
+                    ctx.drawImage(obj.bg, 0, 0,SCREEN_WIDTH, SCREEN_HEIGHT);
+                    //banner动
+                    banner.move();
+                    banner.draw();
+                    /*****开始页*****/
+                    //开始的图
+                    titleImg.move();
+                    titleImg.draw();
+                    start.draw();
+                    window.requestAnimationFrame(move);
+                }
+                move();
+
+
+
+            }
+			
+		</script>
+	</body>
+</html>
