@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bg_jpg,egret_icon_png,description_json,background_2_png,bomb_png,bullet1_png,bullet2_png,enemy1_blowup_1_png,enemy1_blowup_2_png,enemy1_blowup_3_png,enemy1_blowup_4_png,enemy1_fly_1_png,enemy2_blowup_1_png,enemy2_blowup_2_png,enemy2_blowup_3_png,enemy2_blowup_4_png,enemy2_blowup_5_png,enemy2_blowup_6_png,enemy2_blowup_7_png,enemy2_fly_1_png,enemy2_fly_2_png,enemy2_hit_1_png,enemy3_blowup_1_png,enemy3_blowup_2_png,enemy3_blowup_3_png,enemy3_blowup_4_png,enemy3_fly_1_png,enemy3_hit_1_png,enemy3_hit_2_png,enemy4_fly_1_png,enemy5_fly_1_png,game_pause_png,game_pause_hl_png,hero_blowup_1_png,hero_blowup_2_png,hero_blowup_3_png,hero_blowup_4_png,hero_fly_1_png,hero_fly_2_png,loading0_png,loading1_png,loading2_png,loading3_png,bullet_mp3,enemy1_down_mp3,enemy2_down_mp3,enemy2_out_mp3,enemy3_down_mp3,game_music_mp3,game_over_mp3",
+			"keys": "bg_jpg,egret_icon_png,description_json,background_2_png,bomb_png,bullet1_png,bullet2_png,enemy1_blowup_1_png,enemy1_blowup_2_png,enemy1_blowup_3_png,enemy1_blowup_4_png,enemy1_fly_1_png,enemy2_blowup_1_png,enemy2_blowup_2_png,enemy2_blowup_3_png,enemy2_blowup_4_png,enemy2_blowup_5_png,enemy2_blowup_6_png,enemy2_blowup_7_png,enemy2_fly_1_png,enemy2_fly_2_png,enemy2_hit_1_png,enemy3_blowup_1_png,enemy3_blowup_2_png,enemy3_blowup_3_png,enemy3_blowup_4_png,enemy3_fly_1_png,enemy3_hit_1_png,enemy3_hit_2_png,enemy4_fly_1_png,enemy5_fly_1_png,game_pause_png,game_pause_hl_png,hero_blowup_1_png,hero_blowup_2_png,hero_blowup_3_png,hero_blowup_4_png,hero_fly_1_png,hero_fly_2_png,loading0_png,loading1_png,loading2_png,loading3_png",
 			"name": "preload"
 		}
 	],
@@ -220,41 +220,6 @@
 			"name": "loading3_png",
 			"type": "image",
 			"url": "assets/images/loading3.png"
-		},
-		{
-			"name": "bullet_mp3",
-			"type": "sound",
-			"url": "assets/audio/bullet.mp3"
-		},
-		{
-			"name": "enemy1_down_mp3",
-			"type": "sound",
-			"url": "assets/audio/enemy1_down.mp3"
-		},
-		{
-			"name": "enemy2_down_mp3",
-			"type": "sound",
-			"url": "assets/audio/enemy2_down.mp3"
-		},
-		{
-			"name": "enemy2_out_mp3",
-			"type": "sound",
-			"url": "assets/audio/enemy2_out.mp3"
-		},
-		{
-			"name": "enemy3_down_mp3",
-			"type": "sound",
-			"url": "assets/audio/enemy3_down.mp3"
-		},
-		{
-			"name": "game_music_mp3",
-			"type": "sound",
-			"url": "assets/audio/game_music.mp3"
-		},
-		{
-			"name": "game_over_mp3",
-			"type": "sound",
-			"url": "assets/audio/game_over.mp3"
 		}
 	]
 }
