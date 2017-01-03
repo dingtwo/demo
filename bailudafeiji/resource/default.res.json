@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bg_jpg,egret_icon_png,description_json,background_2_png,bomb_png,bullet1_png,bullet2_png,enemy1_blowup_1_png,enemy1_blowup_2_png,enemy1_blowup_3_png,enemy1_blowup_4_png,enemy1_fly_1_png,enemy2_blowup_1_png,enemy2_blowup_2_png,enemy2_blowup_3_png,enemy2_blowup_4_png,enemy2_blowup_5_png,enemy2_blowup_6_png,enemy2_blowup_7_png,enemy2_fly_1_png,enemy2_fly_2_png,enemy2_hit_1_png,enemy3_blowup_1_png,enemy3_blowup_2_png,enemy3_blowup_3_png,enemy3_blowup_4_png,enemy3_fly_1_png,enemy3_hit_1_png,enemy3_hit_2_png,enemy4_fly_1_png,enemy5_fly_1_png,game_pause_png,game_pause_hl_png,hero_blowup_1_png,hero_blowup_2_png,hero_blowup_3_png,hero_blowup_4_png,hero_fly_1_png,hero_fly_2_png,loading0_png,loading1_png,loading2_png,loading3_png,bullet_mp3,enemy1_down_mp3,enemy2_down_mp3,enemy2_out_mp3,enemy3_down_mp3,game_music_mp3,game_over_mp3,gameArts-hd_png,gameArts_png",
+			"keys": "bg_jpg,egret_icon_png,description_json,background_2_png,bomb_png,bullet1_png,bullet2_png,enemy1_blowup_1_png,enemy1_blowup_2_png,enemy1_blowup_3_png,enemy1_blowup_4_png,enemy1_fly_1_png,enemy2_blowup_1_png,enemy2_blowup_2_png,enemy2_blowup_3_png,enemy2_blowup_4_png,enemy2_blowup_5_png,enemy2_blowup_6_png,enemy2_blowup_7_png,enemy2_fly_1_png,enemy2_fly_2_png,enemy2_hit_1_png,enemy3_blowup_1_png,enemy3_blowup_2_png,enemy3_blowup_3_png,enemy3_blowup_4_png,enemy3_fly_1_png,enemy3_hit_1_png,enemy3_hit_2_png,enemy4_fly_1_png,enemy5_fly_1_png,game_pause_png,game_pause_hl_png,hero_blowup_1_png,hero_blowup_2_png,hero_blowup_3_png,hero_blowup_4_png,hero_fly_1_png,hero_fly_2_png,loading0_png,loading1_png,loading2_png,loading3_png,bullet_mp3,enemy1_down_mp3,enemy2_down_mp3,enemy2_out_mp3,enemy3_down_mp3,game_music_mp3,game_over_mp3",
 			"name": "preload"
 		}
 	],
@@ -255,16 +255,6 @@
 			"name": "game_over_mp3",
 			"type": "sound",
 			"url": "assets/audio/game_over.mp3"
-		},
-		{
-			"name": "gameArts-hd_png",
-			"type": "image",
-			"url": "assets/audio/gameArts-hd.png"
-		},
-		{
-			"name": "gameArts_png",
-			"type": "image",
-			"url": "assets/audio/gameArts.png"
 		}
 	]
 }
